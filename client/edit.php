@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once "../session.php";?>
 <!doctype html>
 <html lang="en">
 
@@ -14,20 +14,20 @@
         }
     </style>
     <div id="inj">
-            <?php require_once '../req/css.php'; ?>
+            <?php require_once '../req/css.php';?>
     </div>
 
 </head>
 
-<body class="sidebar-main-active right-column-fixed">
+<body class="sidebar-main-active right-column-fixed hide">
     <!-- loader Start -->
     <div id="loading">
         <div id="loading-center">
         </div>
     </div>
     <?php require_once '../assets/nav/top.php';
-require_once '../assets/nav/sidebar.php';
-?>
+        require_once '../assets/nav/sidebar.php';
+    ?>
     <div class="wrapper">
         <div id="content-page" class="content-page">
             <div class="container-fluid">
@@ -79,7 +79,7 @@ require_once '../assets/nav/sidebar.php';
                                                     <div class="col-md-12">
                                                         <center>
                                                             <div class="profile-img-edit">
-                                                                <img class="profile-pic" src="images/user/11.png"
+                                                                <img class="profile-pic" src="<?=$img?>"
                                                                     alt="profile-pic">
                                                                 <div class="p-image">
                                                                     <i class="ri-pencil-line upload-button"></i>
@@ -95,22 +95,23 @@ require_once '../assets/nav/sidebar.php';
                                                     <div class="form-group col-sm-12">
                                                         <label for="uname">User Name:</label>
                                                         <input type="text" class="form-control" id="uname"
-                                                            value="Barry@01" name="uname">
+                                                            value="<?=$_SESSION['data']['uname'];?>" name="uname">
                                                     </div>
                                                     <div class="form-group col-sm-6">
                                                         <label for="fname">First Name:</label>
-                                                        <input type="text" class="form-control" id="fname" value="Barry"
+                                                        <input type="text" class="form-control" id="fname" value="<?=$_SESSION['data']['fname'];?>"
                                                             required name="fn">
                                                     </div>
                                                     <div class="form-group col-sm-6">
                                                         <label for="lname">Last Name:</label>
-                                                        <input type="text" class="form-control" id="lname" value="Tech"
+                                                        <input type="text" class="form-control" id="lname" value="<?=$_SESSION['data']['lname'];?>"
                                                             name="ln">
                                                     </div>
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary mr-2"
                                                     name="pi">Submit</button>
+                                                    <div class="e1 error"></div>
 
                                             </form>
                                         </div>
@@ -129,7 +130,7 @@ require_once '../assets/nav/sidebar.php';
                                                 <div class="form-group">
                                                     <label for="cpass">Current Password:</label>
 
-                                                    <input type="Password" class="form-control " id="cpass" value=""
+                                                    <input type="Password" class="form-control " id="cpass" name="cpass" value=""
                                                         name="cpass" >
                                                     <div class="chpwd">Invalid Password </div>
                                                 </div>
@@ -144,8 +145,9 @@ require_once '../assets/nav/sidebar.php';
                                                     <div class="checkpwd">Passowrds are not matching !</div>
                                                 </div>
                                                 <button type="submit" class="btn  dosub btn-primary mr-2"
-                                                    name="cp">Submit</button>
-                                                <a href="javascripe:void();" class="float-right">Forgot Password</a>
+                                                    name="cp">Submit</button><a href="javascripe:void();" class="float-right">Forgot Password ?</a>
+                                                    <div class="error e2"></div>
+
                                             </form>
                                         </div>
                                     </div>
@@ -163,22 +165,22 @@ require_once '../assets/nav/sidebar.php';
                                                     <div class="form-group">
                                                         <label for="facebook">Facebook:</label>
                                                         <input type="text" class="form-control" id="facebook"
-                                                            value="www.facebook.com" name="fb">
+                                                            value="<?=$_SESSION['data']['fb'] != null ? $_SESSION['data']['fb'] : 'www.facebook.com';?>" name="fb">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="twitter">Twitter:</label>
                                                         <input type="text" class="form-control" id="twitter"
-                                                            value="www.twitter.com" name="tw">
+                                                            value="<?=$_SESSION['data']['fb'] != null ? $_SESSION['data']['tw'] : 'www.twitter.com';?>" name="tw">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="instagram">Instagram:</label>
                                                         <input type="text" class="form-control" id="instagram"
-                                                            value="www.instagram.com" name="ig">
+                                                            value="<?=$_SESSION['data']['fb'] != null ? $_SESSION['data']['fb'] : 'www.instagram.com';?>" name="ig">
                                                     </div>
 
                                                     <button type="submit" class="btn btn-primary" name="social">Submit</button>
-
+                                                    <div class="error e3"></div>
                                                 </form>
                                             </div>
                                         </div>
@@ -193,19 +195,15 @@ require_once '../assets/nav/sidebar.php';
                                         </div>
                                         <div class="iq-card-body">
                                             <form method="post">
-                                                <div class="form-group">
-                                                    <label for="cno">Contact Number:</label>
-                                                    <input type="text" class="form-control" id="cno"
-                                                        value="001 2536 123 458" name="pn">
-                                                </div>
+
                                                 <div class="form-group">
                                                     <label for="email">Email:</label>
                                                     <input type="text" class="form-control" id="email"
-                                                        value="Barryjone@demo.com" name="mail">
+                                                        value="<?=$_SESSION['data']['mail'];?>" name="mail">
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary mr-2" name="contact">Submit</button>
-
+                                                <div class="error e4"></div>
                                             </form>
                                         </div>
                                     </div>
@@ -219,10 +217,10 @@ require_once '../assets/nav/sidebar.php';
         </div>
     </div>
     <?php $js = '../';
-	require_once '../req/js.php'; ?>
+    require_once '../req/js.php';?>
 </body>
 <script>
-    //$(".dosub").prop("disabled", true)
+    $(".dosub").prop("disabled", true)
     $(".pwd").on("keyup", function() {
         let val1 = document.getElementById("npass").value;
         let val2 = document.getElementById("vpass").value;

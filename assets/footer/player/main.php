@@ -43,23 +43,25 @@
 </footer>
 <section class="searchmenus" id="show">
     <div class="container mt-5">
-        <div class="form-group container searchboxs">
-            <div class="close" id="closearch">
-                <i class="fa fa-times fa-2x " aria-hidden="true"></i>
+        <div class="close" id="closearch">
+            <i class="fa fa-times fa-2x <?=$_SESSION['data']['theme'] == 0 ? 'text-white' : ''; ?>"
+                aria-hidden="true"></i>
+        </div>
+        <div class="container-fluid searchboxs">
+            <div >
+                <input type="text"
+                    class=" mb-5 focus <?=$_SESSION['data']['theme'] == 0 ? 'text-white' : ''; ?>"
+                    placeholder="type to search ..." name="uname" onkeyup="goSearch(this.value)" tabindex="1"
+                    autocomplete="off">
             </div>
-            <input type="text" class="form-control mb-5 focus" placeholder="type to search ..."
-                onkeyup="goSearch(this.value)" tabindex="1" />
-            <div>
-                <div class="col-lg-12">
-                    <div class="iq-card ">
-                        <div class="iq-card-header d-flex justify-content-between">
-                            <div class="iq-header-title">search results ...</div>
-                        </div>
-                        <div class="iq-card-body">
-                            <ul class="list-unstyled row iq-box-hover mb-0 " id="getresult">
 
-                            </ul>
-                        </div>
+            <div class=" ">
+                <div class="iq-card " style="box-shadow: none">
+                    
+                    <div class="iq-card-body">
+                        <ul class="list-unstyled row iq-box-hover mb-0 " id="getresult">
+									
+                        </ul>
                     </div>
                 </div>
             </div>

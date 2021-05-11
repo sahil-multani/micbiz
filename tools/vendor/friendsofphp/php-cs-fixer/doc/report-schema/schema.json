@@ -1,47 +1,39 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "type": "object",
-    "properties": {
-        "files": {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "appliedFixers": {
             "type": "array",
             "uniqueItems": true,
             "items": {
-                "type": "object",
-                "properties": {
-                    "name": {
-                        "type": "string"
-                    },
-                    "appliedFixers": {
-                        "type": "array",
-                        "uniqueItems": true,
-                        "items": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "required": [
-                    "name"
-                ]
+              "type": "string"
             }
+          }
         },
-        "time": {
-            "type": "object",
-            "properties": {
-                "total": {
-                    "type": "number"
-                }
-            },
-            "required": [
-                "total"
-            ]
-        },
-        "memory": {
-            "type": "number"
-        }
+        "required": ["name"]
+      }
     },
-    "required": [
-        "files",
-        "time",
-        "memory"
-    ]
+    "time": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "number"
+        }
+      },
+      "required": ["total"]
+    },
+    "memory": {
+      "type": "number"
+    }
+  },
+  "required": ["files", "time", "memory"]
 }

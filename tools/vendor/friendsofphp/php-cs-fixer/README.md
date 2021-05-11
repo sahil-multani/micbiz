@@ -4,15 +4,14 @@
     </a>
 </p>
 
-PHP Coding Standards Fixer
-==========================
+# PHP Coding Standards Fixer
 
 The PHP Coding Standards Fixer (PHP CS Fixer) tool fixes your code to follow standards;
 whether you want to follow PHP coding standards as defined in the PSR-1, PSR-2, etc.,
 or other community driven ones like the Symfony one.
 You can **also** define your (team's) style through configuration.
 
-It can modernize your code (like converting the ``pow`` function to the ``**`` operator on PHP 5.6)
+It can modernize your code (like converting the `pow` function to the `**` operator on PHP 5.6)
 and (micro) optimize it.
 
 If you are already using a linter to identify coding standards problems in your
@@ -54,12 +53,12 @@ If you need to apply code styles that are not supported by the tool, you can
 
 Dedicated plugins exist for:
 
-* [Atom](https://github.com/Glavin001/atom-beautify)
-* [NetBeans](http://plugins.netbeans.org/plugin/49042/php-cs-fixer)
-* [PhpStorm](https://medium.com/@valeryan/how-to-configure-phpstorm-to-use-php-cs-fixer-1844991e521f)
-* [Sublime Text](https://github.com/benmatselby/sublime-phpcs)
-* [Vim](https://github.com/stephpy/vim-php-cs-fixer)
-* [VS Code](https://github.com/junstyle/vscode-php-cs-fixer)
+- [Atom](https://github.com/Glavin001/atom-beautify)
+- [NetBeans](http://plugins.netbeans.org/plugin/49042/php-cs-fixer)
+- [PhpStorm](https://medium.com/@valeryan/how-to-configure-phpstorm-to-use-php-cs-fixer-1844991e521f)
+- [Sublime Text](https://github.com/benmatselby/sublime-phpcs)
+- [Vim](https://github.com/stephpy/vim-php-cs-fixer)
+- [VS Code](https://github.com/junstyle/vscode-php-cs-fixer)
 
 ## Community
 

@@ -79,7 +79,6 @@ NOTE: This file contains the styling for responsive Template.
     });
 });
 
-
 jQuery(document).ready(function ($) {
   /*************************
        			Right sidebar

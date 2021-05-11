@@ -1,5 +1,4 @@
-composer/semver
-===============
+# composer/semver
 
 Semver library that offers utilities, version constraint parsing and validation.
 
@@ -8,9 +7,7 @@ now extracted and made available as a stand-alone library.
 
 [![Continuous Integration](https://github.com/composer/semver/workflows/Continuous%20Integration/badge.svg?branch=main)](https://github.com/composer/semver/actions)
 
-
-Installation
-------------
+## Installation
 
 Install the latest version with:
 
@@ -18,33 +15,27 @@ Install the latest version with:
 $ composer require composer/semver
 ```
 
+## Requirements
 
-Requirements
-------------
+- PHP 5.3.2 is required but using the latest version of PHP is highly recommended.
 
-* PHP 5.3.2 is required but using the latest version of PHP is highly recommended.
-
-
-Version Comparison
-------------------
+## Version Comparison
 
 For details on how versions are compared, refer to the [Versions](https://getcomposer.org/doc/articles/versions.md)
 article in the documentation section of the [getcomposer.org](https://getcomposer.org) website.
 
-
-Basic usage
------------
+## Basic usage
 
 ### Comparator
 
 The `Composer\Semver\Comparator` class provides the following methods for comparing versions:
 
-* greaterThan($v1, $v2)
-* greaterThanOrEqualTo($v1, $v2)
-* lessThan($v1, $v2)
-* lessThanOrEqualTo($v1, $v2)
-* equalTo($v1, $v2)
-* notEqualTo($v1, $v2)
+- greaterThan($v1, $v2)
+- greaterThanOrEqualTo($v1, $v2)
+- lessThan($v1, $v2)
+- lessThanOrEqualTo($v1, $v2)
+- equalTo($v1, $v2)
+- notEqualTo($v1, $v2)
 
 Each function takes two version strings as arguments and returns a boolean. For example:
 
@@ -58,13 +49,11 @@ Comparator::greaterThan('1.25.0', '1.24.0'); // 1.25.0 > 1.24.0
 
 The `Composer\Semver\Semver` class provides the following methods:
 
-* satisfies($version, $constraints)
-* satisfiedBy(array $versions, $constraint)
-* sort($versions)
-* rsort($versions)
+- satisfies($version, $constraints)
+- satisfiedBy(array $versions, $constraint)
+- sort($versions)
+- rsort($versions)
 
-
-License
--------
+## License
 
 composer/semver is licensed under the MIT License, see the LICENSE file for details.

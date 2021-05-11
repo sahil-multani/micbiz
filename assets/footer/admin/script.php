@@ -1,4 +1,5 @@
 <script>
+  
   var playerTrack = $("#player-track"),
     bgArtwork = $("#track-art"),
     bgArtworkUrl,
@@ -278,6 +279,7 @@
         return;
       } else {
         response.json().then(function(data) {
+		  
           for (let i = 0; i < data.length; i++) {
             let url = data[i].stream_url;
             let img = data[i].user.avatar_url;
@@ -308,19 +310,19 @@
                                                         <div class="feature-list text-center">
                                                             <h6 class="font-weight-600 mb-0">${data[i].title}</h6>
                                                             <p class="mb-0">${data[i].user.username}</p>
-                                                            <input type="checkbox" name="" id="c_${i}" onclick='getmusic(${i},this.checked)'>
+                                                            <input type="radio" name="play" id="c_${i}" onclick='getmusic(${i},this.checked)'>
                                                             <label for="c_${i}">play song</label>
-                                                            <input type="checkbox" name="sahil" id="p_${i}" data-id="${Date.now()}" data-no=${i}>
+                                                            <input type="checkbox" name="sahil" id="p_${i}" data-id="${data[i].id}" data-no=${i}>
                                                             <label for="p_${i}">add song</label>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>`;
-            document.getElementById("getresult").innerHTML += markup;
-          }
-        });
-      }
-    });
+			document.getElementById("getresult").innerHTML += markup;
+		  }
+		});
+	  }
+	});
     document.getElementById("getresult").innerHTML = "";
   }
 

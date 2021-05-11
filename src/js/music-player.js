@@ -17,7 +17,7 @@ let isPlaying = false;
 let updateTimer;
 
 // Create new audio element
-let curr_track = document.createElement('audio');
+let curr_track = document.createElement("audio");
 // console.log(curr_track);
 
 // Define the tracks that have to be played
@@ -26,13 +26,13 @@ let track_list = [
     name: "sa Smoke",
     artist: "Cascada",
     image: "images/user/1.jpg",
-    path: "images/dashboard/2.mp3"
+    path: "images/dashboard/2.mp3",
   },
   {
     name: "Gabby Barrett",
     artist: "Emeli Sande",
     image: "images/dashboard/audio/01.png",
-    path: "images/1.mp3"
+    path: "images/1.mp3",
   },
   {
     name: "Megan Thee",
@@ -41,9 +41,8 @@ let track_list = [
     path: "images/dashboard/audio/audio.mp3",
   },
 ];
-console.log(track_list)
+console.log(track_list);
 function random_bg_color() {
-
   // Get a number between 64 to 256 (for getting lighter colors)
   let red = Math.floor(Math.random() * 256) + 64;
   let green = Math.floor(Math.random() * 256) + 64;
@@ -51,7 +50,6 @@ function random_bg_color() {
 
   // Construct a color withe the given values
   let bgColor = "rgb(" + red + "," + green + "," + blue + ")";
-
 }
 
 function loadTrack(track_index) {
@@ -59,10 +57,12 @@ function loadTrack(track_index) {
   resetValues();
   curr_track.src = track_list[track_index].path;
   curr_track.load();
-  track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
+  track_art.style.backgroundImage =
+    "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
-  now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+  now_playing.textContent =
+    "PLAYING " + (track_index + 1) + " OF " + track_list.length;
 
   updateTimer = setInterval(seekUpdate, 1000);
   curr_track.addEventListener("ended", nextTrack);
@@ -92,20 +92,18 @@ function playTrack() {
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
-  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';;
+  playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-3x"></i>';
 }
 
 function nextTrack() {
-  if (track_index < track_list.length - 1)
-    track_index += 1;
+  if (track_index < track_list.length - 1) track_index += 1;
   else track_index = 0;
   loadTrack(track_index);
   playTrack();
 }
 
 function prevTrack() {
-  if (track_index > 0)
-    track_index -= 1;
+  if (track_index > 0) track_index -= 1;
   else track_index = track_list.length;
   loadTrack(track_index);
   playTrack();
@@ -129,33 +127,42 @@ function seekUpdate() {
     seek_slider.value = seekPosition;
 
     let currentMinutes = Math.floor(curr_track.currentTime / 60);
-    let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+    let currentSeconds = Math.floor(
+      curr_track.currentTime - currentMinutes * 60
+    );
     let durationMinutes = Math.floor(curr_track.duration / 60);
-    let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+    let durationSeconds = Math.floor(
+      curr_track.duration - durationMinutes * 60
+    );
 
-    if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
-    if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-    if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
-    if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+    if (currentSeconds < 10) {
+      currentSeconds = "0" + currentSeconds;
+    }
+    if (durationSeconds < 10) {
+      durationSeconds = "0" + durationSeconds;
+    }
+    if (currentMinutes < 10) {
+      currentMinutes = "0" + currentMinutes;
+    }
+    if (durationMinutes < 10) {
+      durationMinutes = "0" + durationMinutes;
+    }
 
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
 
+$("body").on("click", function () {
+  track_list = [
+    {
+      name: "song 1",
+      artist: "song one",
+      image: "images/user/1.jpg",
+      path: "images/dashboard/1.mp3",
+    },
+  ];
 
-   
-$("body").on("click",function(){
-  
-track_list = [
-{
-name: "song 1",
-artist: "song one",
-image: "images/user/1.jpg",
-path: "images/dashboard/1.mp3"
-}]
-
-console.log(track_list);
-loadTrack(track_index)
-
+  console.log(track_list);
+  loadTrack(track_index);
 });

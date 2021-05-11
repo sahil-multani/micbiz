@@ -83,10 +83,10 @@ return PhpCsFixer\Config::create()
         'no_trailing_whitespace_in_comment' => true,
         //removes whitespaces at end of comments. Works!
 		
-        // 'normalize_index_brace' => true,
+         'normalize_index_brace' => true,
         'object_operator_without_whitespace' => true,
         // 'php_unit_fqcn_annotation' => true,
-        // 'phpdoc_align' => true,
+         'phpdoc_align' => true,
         // 'phpdoc_annotation_without_dot' => true,
         // 'phpdoc_indent' => true,
         // 'phpdoc_inline_tag' => true,

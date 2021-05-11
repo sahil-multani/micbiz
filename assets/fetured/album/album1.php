@@ -12,9 +12,10 @@
                               <div class="iq-card mb-0">
                                  <div class="iq-card-body p-0">
                                     <div class="iq-thumb">
+
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/01.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/01.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -25,6 +26,7 @@
                                     <div class="feature-list text-center">
                                        <h6 class="font-weight-600 mb-0">Doja Cat</h6>
                                        <p class="mb-0">Annie Lennox</p>
+
                                     </div>
                                  </div>
                               </div>
@@ -35,7 +37,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/02.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/02.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -56,7 +58,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/03.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/03.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -77,7 +79,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/04.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/04.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -98,7 +100,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/05.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/05.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -119,7 +121,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/06.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/06.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -140,7 +142,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/07.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/07.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -161,7 +163,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -182,7 +184,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/09.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/09.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
@@ -203,7 +205,7 @@
                                     <div class="iq-thumb">
                                        <div class="iq-music-overlay"></div>
                                        <a href ="music-player.html">
-                                          <img src="images/dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
+                                          <img src="/music/src/images/dashboard/feature-album/08.png" class="img-border-radius img-fluid w-100" alt="">
                                        </a>
                                        <div class="overlay-music-icon">
                                           <a href ="music-player.html">
